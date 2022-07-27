@@ -1,28 +1,31 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+   <div id="app">
+    <Catagtory></Catagtory>
+      <div class="list">
+        <div class="article_item">
+          <h3 class="van-ellipsis">python数据预处理 ：数据标准化</h3>
+          <div class="img_box">
+            <img src="@/assets/back.jpg"
+            class="w100" />
+          </div>
+          <!---->
+          <div class="info_box">
+            <span>13552285417</span>
+            <span>0评论</span>
+            <span>2018-11-29T17:02:09</span>
+          </div>
+        </div>
+      </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Catagtory from './components/catagtory.vue';
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    components: { Catagtory }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
