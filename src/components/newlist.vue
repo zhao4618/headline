@@ -1,9 +1,14 @@
 <template>
     <div class="list">
-        <div class="article_item">
-            <h3 class="van-ellipsis">python数据预处理 ：数据标准化</h3>
-            <div class="img_box">
-                <img src="@/assets/back.jpg" class="w100" />
+        <div class="article_item" v-for="item in currentList" :key="item.art_id">
+            <h3 class="van-ellipsis">{{ item.title }}</h3>
+            <div class="img_box" v-if="item.cover.type === 1">
+                <img :src="item.cover.images[0]" class="w100" />
+            </div>
+            <div class="img_box" v-else-if="item.cover.type === 3">
+                <img :src="item.cover.images[0]" class="w33" />
+                 <img :src="item.cover.images[1]" class="w33" />
+                  <img :src="item.cover.images[2]" class="w33" />
             </div>
             <div class="info_box">
                 <span>13552285417</span>
@@ -18,7 +23,7 @@
 import { mapGetters } from 'vuex'
 export default {
     computed: {
-        ...mapGetters(['currentCatagtory'])
+        ...mapGetters(['currentCatagtory','currentList'])
     },
     watch: {
         currentCatagtory(newvalue) {

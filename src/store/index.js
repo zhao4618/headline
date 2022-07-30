@@ -16,6 +16,7 @@ export default new Vuex.Store({
     getters: {
         //建立于子模块的快捷访问
         catagtory: state => state.catagtory.catagtory,
-        currentCatagtory: state => state.catagtory.currentCatagtory
+        currentCatagtory: state => state.catagtory.currentCatagtory,
+        currentList: state => state.newlist.allDate[state.catagtory.currentCatagtory] || []
     }
 })
