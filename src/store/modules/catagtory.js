@@ -24,7 +24,8 @@ export default {
                     }
                 }
             } = await axios.get('http://toutiao.itheima.net/v1_0/channels')
-                //context相当于$store.state调用提交覆盖数据
+            console.log(channels);
+            //context相当于$store.state调用提交覆盖数据
             context.commit('updateCatagtory', channels)
             context.commit("updateCurrentCatagtory", channels[0].id)
         }

@@ -13,7 +13,7 @@
             <div class="info_box">
                 <span>13552285417</span>
                 <span>0评论</span>
-                <span>2018-11-29T17:02:09</span>
+                <span>{{item.pubdate}}</span>
             </div>
         </div>
     </div>
